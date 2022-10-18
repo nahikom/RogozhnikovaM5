@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru" style="background: url(files/8.jpg) repeat;">
+<head>
+    <meta charset="utf-8"/>
+    <title>Калькулятор цен</title>
+    <script src="calc.js" defer></script>
+    <script>
+     document.addEventListener("DOMContentLoaded", function(event) {
+     console.log("DOM fully loaded and parsed");
+     });
+    </script>
+</head>
+<body>
+    <div style="background-color: rgba(143, 189, 234, 0.6);">
+    <h1>Калькулятор стоимости заказа</h1>
+    <strong>Цена товара: 1500р.</strong>
+    <br>
+    <strong>Введите количество товара:</strong>
+	<p><input id="kol" /></p>
+	<div id="prodPrice">Выберите тип товара</div>
+        <form>
+            <select name="product" id="product">
+                <option value="1" id="s1">Первый тип</option>
+                <option value="2" id="s2">Второй тип</option>
+                <option value="3" id="s3">Третий тип</option>
+            </select>
+            <div id="radios">
+                <label><input type="radio" name="prodOptions" value="option1" id="op1">Доставка: 100р.</label>
+                <label><input type="radio" name="prodOptions" value="option2" id="op2">Сборка: 200р.</label>
+                <label><input type="radio" name="prodOptions" value="option3" id="op3">Настройка: 300р.</label>
+            </div>
+            <div id="checkboxes">
+                <label><input type="checkbox" name="prop1" id="sv1">Гарантия 1 год: 1000р.</label>
+                <label><input type="checkbox" name="prop2" id="sv2">Гарантия 2 года: 2000р.</label>
+            </div>
+        </form>
+    <div>
+        <button id="btn" style = "margin: 5px;">Посчитать</button>
+        <hr>
+        <p id="answer" style = "font-size: large; font-weight: bold;"></p>
+    </div>
+    </div>
+</body>
+</html>
